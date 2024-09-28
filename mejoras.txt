@@ -1,0 +1,20 @@
+
+Tecnologías usadas:
+HTML5, CSS3, JavaScript
+
+Tareas pendientes (y % de avance)
+Estamos a un 5% del desarrollo final del portal web
+
+
+Pasos futuros de la aplicación
+
+
+Navegación rápida a través de la aplicación + mostrar código sobre las partes más importantes
+- Página adaptable a cualquier dispositivo
+- Menú hamburguesa (en desarrollo)
+- Revisión de código continua para su mejora
+    - No existan estilos en línea
+    - No existan scripts en línea
+
+Mobile first!
+    
