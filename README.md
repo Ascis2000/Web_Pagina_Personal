@@ -1,4 +1,4 @@
-El prProoyecto de página Web Personal:
+El Proyecto de página Web Personal:
 - Secciones: Home, Biografía, Portfolio, Contacto
 
 HTML5
@@ -15,7 +15,6 @@ Incluye algunos elementos multimedia (imágenes, videos, audios).
 
 Contacto
 contacto.html, se incluye al menos un formulario.
-
 
 CSS3
 Tipografía personalizada
