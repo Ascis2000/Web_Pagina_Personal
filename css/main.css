@@ -1,0 +1,243 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Pathway Extreme";
+    src: url("../assets/fonts/Pathway_Extreme/PathwayExtreme-VariableFont.ttf") format("truetype");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+    font-family: "Pathway Extreme", Geneva, Tahoma, sans-serif;
+
+    background: #C5D1DE;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url('../img/body_code.jpg');
+}
+
+/* Primera cabecera con redes sociales */
+header {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #666f8b;
+
+    .enlaces {
+        gap: 20px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 30px 0px 30px;
+        color: rgb(232, 237, 243);
+    }
+    
+    .enlaces a {
+        text-decoration: none;
+        color: rgb(232, 237, 243);
+        transition: transform 0.2s ease; /* Transición suave */
+    }
+    .enlaces a:hover {
+        color: rgb(248, 251, 142);
+        transform: scale(1.5);
+    }
+}
+
+/* boxNavegacion*/
+.boxNavegacion {
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+
+    z-index: 100;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+
+    background: rgb(56,102,129);
+    background: linear-gradient(0deg, rgba(56,102,129,1) 0%, rgba(123,186,205,1) 100%);
+    box-shadow: 0 4px 8px rgba(24, 25, 25, 0.2); /* Sombra */
+
+    /* Contenedor que agrupa el título y la navegación */
+    .contenido {
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        /* Estilo del título a la izquierda */
+        .titulo {
+            margin: 0;
+            min-width: 100px;
+            text-align: left;
+
+            font-size: 1.2em;
+            text-shadow: #263d4e 0 2px 3px;
+        }
+
+        /* Navegación a la derecha */
+        .navegacion {
+            color: white;
+        }
+        /* Estilo de los enlaces de navegación */
+        .navegacion a {
+            color: white;
+            font-size:0.8em;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: #263d4e 0 2px 3px;
+            padding: 0px 10px;
+        }
+        .navegacion a:hover {
+            color: rgb(247, 245, 142);
+        }
+        .navegacion a.activo {
+            color: rgb(247, 245, 142);
+        }
+    }
+}
+
+/* Estilo del contenedor principal */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.boxArticulos {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 1;
+    padding: 15px;
+    min-width: 200px;
+
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.card-datos{
+    z-index:1;
+    position: relative;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    
+    opacity:0.6;
+    -webkit-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+}
+
+.card-datos:hover{
+    opacity:1;
+}
+
+.card-datos.bio{
+    background-image:url('../img/card-amanecer_00.jpg');
+}
+.card-datos.porfolio{
+    background-image:url('../img/card-porfolio_00.jpg');
+}
+.card-datos.programacion{
+    background-image:url('../img/card-programacion_00.jpg');
+}
+.card-datos.contacto{
+    background-image:url('../img/card-contacto_00.jpg');
+}
+
+.card-datos > h2{
+    color:white;
+    text-shadow: #36444e 0 2px 3px;
+}
+
+.card-datos > p{
+    color:white;
+    text-shadow: #36444e 0 2px 3px;
+}
+
+.asides {
+    flex: 1;
+    min-width: 300px;
+}
+
+aside {
+    background-color: #e8e8e8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Estilos del footer */
+footer {
+    padding: 15px 0;
+
+    color: rgb(193, 200, 213);
+    text-align: center;
+    font-size: 12px;
+    background-color: #333;
+    box-shadow: 0 -4px 8px rgba(24, 25, 25, 0.2); /* Sombra hacia arriba */
+
+    small{
+        display: inline-block;
+    }
+}
+
+/* ********************************** */
+
+/* Estilo del ícono de hamburguesa */
+.menu-hamburguesa {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 400px) {
+
+    .menu-hamburguesa {
+        display: none;
+    }
+}
+
+/* Cuando el menú esté visible (clase activa) */
+.menu-activo {
+    display: block;
+}
+
+/* Cuando la pantalla tiene un valor como máximo de 400px */
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+    .boxArticulos {
+        flex-direction: column; /* Cambia la dirección de los artículos a columna */
+        gap: 10px; /* Opcional: ajustar el espacio entre artículos */
+    }
+
+    article {
+        min-width: 100%; /* Cada artículo ocupará todo el ancho disponible */
+    }
+    .menu-hamburguesa {
+        display: block;
+    }
+    .navegacion {
+        display: none;
+        border:2px solid yellow;
+    }
+}
