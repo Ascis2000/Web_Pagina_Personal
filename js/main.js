@@ -4,6 +4,7 @@ window.addEventListener('load', (event) => {
 });
 
 function inicio(){
+    menuTopNavegacion();
     set_fecha();
 }
 
@@ -24,3 +25,24 @@ function get_fechaActual() {
 
     return `Hoy es ${diaSemana}, ${dia} de ${mes} de ${año}`;
 }
+
+function menuTopNavegacion(){
+
+    let pathName = window.location.pathname.includes('pages') ? '../' : './';
+
+    //alert(window.location.pathname)
+    let dataNavegacion = [
+        {texto:"Home", link:  pathName + "index.html", target:""},
+        {texto:"Biografía", link: pathName + "pages/biografia.html", target:""},
+        {texto:"Portfolio", link:"/index.html", target:"_blank"},
+        {texto:"Code Wars", link:"/index.html", target:"_blank"},
+        {texto:"Contacto", link: pathName + "pages/contacto.html", target:""},
+    ];
+    let selectorEnlaces = document.querySelectorAll(".boxNavegacion .navegacion a");
+
+    for(let i=0; i < selectorEnlaces.length; i++){
+        selectorEnlaces[i].href = dataNavegacion[i].link;
+        selectorEnlaces[i].target = dataNavegacion[i].target;
+    }
+}
+

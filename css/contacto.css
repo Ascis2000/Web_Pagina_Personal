@@ -1,0 +1,106 @@
+
+* {
+    box-sizing: border-box;
+}
+
+section.formulario {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxFormulario {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 30px;
+    word-wrap: break-word;
+
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boxFormulario h2 {
+    color: #3b3baf;
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+.boxFormulario .boxInputs {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.boxFormulario label {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #555555;
+    font-weight: bold;
+}
+
+.boxFormulario input {
+    width: 100%;
+    outline: none;
+    padding: 10px 10px 10px 30px;
+
+    color: rgb(41, 90, 142);
+    font-size: 0.9em;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 0px 6px rgba(228, 244, 254, 0.6);
+    transition: border 0.3s, box-shadow 0.3s ease;
+}
+.boxFormulario input:hover, textarea:hover {
+    border: 1px solid #6ea6c0;
+    box-shadow: inset 0px 0px 6px rgba(100, 247, 255, 0.6);
+}
+.boxFormulario input::placeholder, textarea::placeholder {
+    color: rgb(199, 199, 199); /* Cambia el color del texto del placeholder */
+}
+
+.boxFormulario textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 10px;
+
+    outline: none;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.boxFormulario input:focus, textarea:focus {
+    border-color: #7dcaeb;
+}
+
+.boxFormulario .boxInputs i {
+    top: 11px;
+    left: 10px;
+    position: absolute;
+
+    color: #547eab;
+}
+
+.boxFormulario button {
+    width: 100%;
+    padding: 10px;
+
+    color: white;
+    font-size: 1.0em;
+    cursor: pointer;
+
+    border-radius: 5px;
+    border: 1px solid #1F5021;
+    background-color: #348338;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.boxFormulario button:hover {
+    background-color: #4CAF50;
+}

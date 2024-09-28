@@ -124,6 +124,7 @@ article {
 .card-datos{
     z-index:1;
     position: relative;
+    
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
