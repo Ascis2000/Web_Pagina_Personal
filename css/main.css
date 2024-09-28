@@ -128,10 +128,7 @@ article {
     background-position:center;
     background-repeat:no-repeat;
     
-    opacity:0.6;
-    -webkit-transition: opacity 0.3s linear;
-    -o-transition: opacity 0.3s linear;
-    -moz-transition: opacity 0.3s linear;
+    opacity: 0.6;
     transition: opacity 0.3s linear;
 }
 
@@ -183,10 +180,9 @@ footer {
     font-size: 12px;
     background-color: #333;
     box-shadow: 0 -4px 8px rgba(24, 25, 25, 0.2); /* Sombra hacia arriba */
-
-    small{
-        display: inline-block;
-    }
+}
+footer small{
+    display: inline-block;
 }
 
 /* ********************************** */
