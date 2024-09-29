@@ -68,6 +68,21 @@
                         placeholder="Tus apellidos" required>
                 </div>
 
+                <label for="tlfn">Teléfono</label>
+                <div class="boxInputs">
+                    <i class="fas fa-phone"></i>
+                    <input type="number" id="tlfn" 
+                        name="tlfn" 
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                        placeholder="Tu teléfono" required>
+                </div>
+
+                <label for="tlfn">Ciudad</label>
+                <div class="boxInputs">
+                    <i class="fas fa-building"></i>
+                    <select id="ciudades" name="ciudades" style="width:100%"></select>
+                </div>
+                
                 <label for="email">Correo electrónico</label>
                 <div class="boxInputs">
                     <i class="fas fa-envelope"></i>
@@ -76,11 +91,24 @@
                         placeholder="Tu email" autocomplete="email" required>
                 </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" 
-                    name="mensaje" rows="4" 
-                    placeholder="Escribe tu mensaje" required></textarea>
+                <label for="comentario">Mensaje</label>
+                <textarea id="comentario" 
+                    name="comentario" rows="4" 
+                    placeholder="Escribe tu mensaje" required>
+                </textarea>
+
+                <label class="chkbox" for="accept">
+                    <input type="checkbox" id="accept" value="accept" name="accept"/>
+                    <div>Acepto los términos legales</div>
+                </label>
+        
+                <label class="chkbox" for="spam">
+                    <input type="checkbox" id="spam" value="spam" name="spam" />
+                    <div>Acepto recibir publicidad</div>
+                </label>
     
+                <div id="mensajeError"></div>
+
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -95,6 +123,7 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/contacto.js"></script>
 
 </body>
 </html>

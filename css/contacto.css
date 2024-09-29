@@ -54,12 +54,12 @@ section.formulario {
     box-shadow: inset 0px 0px 6px rgba(228, 244, 254, 0.6);
     transition: border 0.3s, box-shadow 0.3s ease;
 }
-.boxFormulario input:hover, textarea:hover {
+.boxFormulario input:hover, textarea:hover, select:hover {
     border: 1px solid #6ea6c0;
     box-shadow: inset 0px 0px 6px rgba(100, 247, 255, 0.6);
 }
 .boxFormulario input::placeholder, textarea::placeholder {
-    color: rgb(199, 199, 199); /* Cambia el color del texto del placeholder */
+    color: rgb(199, 199, 199);
 }
 
 .boxFormulario textarea {
@@ -86,6 +86,35 @@ section.formulario {
     color: #547eab;
 }
 
+.boxFormulario select {
+    width: 100%;
+    outline: none;
+    padding: 10px 10px 10px 30px;
+
+    color: rgb(41, 90, 142);
+    font-size: 0.9em;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 0px 6px rgba(228, 244, 254, 0.6);
+    transition: border 0.3s, box-shadow 0.3s ease;
+}
+
+label.chkbox {
+    color: #333;
+    display: flex;
+    font-size: 0.9em;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label.chkbox input[type="checkbox"] {
+    width: 18px; 
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .boxFormulario button {
     width: 100%;
     padding: 10px;
@@ -103,4 +132,11 @@ section.formulario {
 
 .boxFormulario button:hover {
     background-color: #4CAF50;
+}
+
+.boxFormulario #mensajeError{
+    color:red;
+    font-size:0.8em;
+    font-weight: bold;
+    margin-bottom:10px;
 }
