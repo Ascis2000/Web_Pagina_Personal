@@ -1,36 +1,38 @@
 
+function inicio(){
+    // Cargamos las ciudades en un select
+    cargarCiudades();
+
+    // vaciamos el contenido del textarea
+    const comentario = document.getElementById("comentario");
+    comentario.value = comentario.value.trim() === "" ? "" : comentario.value.trim();
+}
+
 // Función para cargar las ciudades en el <select>
 function cargarCiudades() {
 
-    const ciudadesEspaña = [
+    const ciudadesEspania = [
         "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza",
         "Málaga", "Murcia", "Córdova", "Las Palmas", "Bilbao"
     ];
 
     const selectorCiudades = document.getElementById("ciudades");
-    // Agregar placeholder
+    // Añadir opcion inicial seleccionada
     let placeholder = document.createElement("option");
     placeholder.text = "Selecciona una ciudad";
     placeholder.value = ""; // Deja el value vacío para que no seleccione ninguna ciudad
     placeholder.selected = true; // Que aparezca seleccionado por defecto
     selectorCiudades.add(placeholder);
 
-    ciudadesEspaña.sort();
+    ciudadesEspania.sort(); // 
 
-    ciudadesEspaña.forEach(ciudad => {
+    ciudadesEspania.forEach(ciudad => {
         let option = document.createElement("option");
         option.text = ciudad;
         option.value = ciudad.toLowerCase();
         selectorCiudades.add(option);
     });
 }
-
-// Llama a la función para cargar las ciudades en el <select>
-cargarCiudades();
-
-const comentario = document.getElementById("comentario");
-comentario.value = comentario.value.trim() === "" ? "" : comentario.value.trim();
-
 
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault(); // paraliza envío formulario
@@ -44,7 +46,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
     const nombre = event.target.nombre.value;
     const apellidos = event.target.apellidos.value;
     const email = event.target.email.value;
-    const tlfn = event.target.tlfn.value;
     const ciudades = event.target.ciudades.value; // select
     const accept = event.target.accept.checked; //checkbox. Booleano
     const spam = event.target.spam.checked; //checkbox. Booleano
@@ -61,9 +62,9 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }
 
     // 3 < lname < 30 required
-    if (apellidos.length < 3 || apellidos.length > 30) {
-        console.log("Apellido fuera de tamaño: 3-30");
-        msj += "Apellido fuera de tamaño: 3-30\n";
+    if (apellidos.length < 3 || apellidos.length > 50) {
+        console.log("Apellido fuera de tamaño: 3-50");
+        msj += "Apellido fuera de tamaño: 3-50\n";
     }
 
     if (
@@ -103,3 +104,5 @@ document.querySelector("form").addEventListener("submit", function (event) {
         event.target.submit();
     }
 });
+
+inicio();
