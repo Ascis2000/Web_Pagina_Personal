@@ -28,7 +28,7 @@ function get_fechaActual() {
 
 function menuTopNavegacion(){
 
-    let pathName = window.location.pathname.includes('pages') ? '../' : './';
+    let pathName = window.location.href.includes('pages') ? '../' : './';
 
     //alert(window.location.pathname)
     let dataNavegacion = [

@@ -1,5 +1,5 @@
 
-function inicio(){
+function inicioContacto(){
     // Cargamos las ciudades en un select
     cargarCiudades();
 
@@ -105,4 +105,4 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }
 });
 
-inicio();
+inicioContacto();
