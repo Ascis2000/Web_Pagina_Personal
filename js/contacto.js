@@ -12,8 +12,16 @@ function inicioContacto(){
 function cargarCiudades() {
 
     const ciudadesEspania = [
-        "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza",
-        "Málaga", "Murcia", "Córdova", "Las Palmas", "Bilbao"
+        {ciudad:"Madrid", valor:"madrid"},
+        {ciudad:"Barcelona", valor:"barcelona"},
+        {ciudad:"Valencia", valor:"valencia"},
+        {ciudad:"Sevilla", valor:"sevilla"},
+        {ciudad:"Málaga", valor:"malaga"},
+        {ciudad:"Murcia", valor:"murcia"},
+        {ciudad:"Córdova", valor:"cordova"},
+        {ciudad:"Las Palmas", valor:"lpalmas"},
+        {ciudad:"Bilbao", valor:"bilbao"},
+        {ciudad:"Lugo", valor:"lugo"}
     ];
 
     const selectorCiudades = document.getElementById("ciudades");
@@ -24,12 +32,12 @@ function cargarCiudades() {
     placeholder.selected = true; // Que aparezca seleccionado por defecto
     selectorCiudades.add(placeholder);
 
-    ciudadesEspania.sort(); // 
+    ciudadesEspania.sort((a, b) => a.ciudad.localeCompare(b.ciudad));
 
-    ciudadesEspania.forEach(ciudad => {
+    ciudadesEspania.forEach(c => {
         let option = document.createElement("option");
-        option.text = ciudad;
-        option.value = ciudad.toLowerCase();
+        option.text = c.ciudad;
+        option.value = c.valor.toLowerCase();
         selectorCiudades.add(option);
     });
 }
