@@ -21,6 +21,23 @@ section.formulario {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.boxFormulario .campoObligatorio{
+    color:red;
+    font-size:0.7em;
+    font-weight:bold;
+    padding: 0px 0px 0px 0px;
+}
+.boxFormulario .textoObligatorio{
+    display: block;
+    margin:10px 0px;
+    
+    color:red;
+    font-size:0.7em;
+    font-weight:bold;
+    padding: 0px 0px 0px 0px;
+
+}
+
 .boxFormulario h2 {
     color: #3b3baf;
     text-align: left;
@@ -34,7 +51,7 @@ section.formulario {
 }
 
 .boxFormulario label {
-    display: block;
+    display: inline-block;
     margin-bottom: 4px;
 
     color: #555555;

@@ -68,6 +68,14 @@ document.querySelector("form").addEventListener("submit", function (event) {
         console.log("Nombre fuera de tamaño: 3-30");
         msj += "Nombre fuera de tamaño: 3-30\n";
     }
+    
+    /* const regexNombre = /^[A-Za-zÀ-ÿ\s]{2,}$/;
+
+    alert(regexNombre.test(nombre))
+    if (regexNombre.test(nombre)) {
+        console.log("Nombre fuera de tamaño: 3-30");
+        msj += "Nombre fuera de tamaño: 3-30\n";
+    } */
 
     // 3 < lname < 30 required
     if (apellidos.length < 3 || apellidos.length > 50) {

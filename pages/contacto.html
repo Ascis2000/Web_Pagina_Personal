@@ -51,8 +51,9 @@
         <div class="boxFormulario">
             <h2>Formulario de Contacto</h2>
             
-            <form>
+            <form novalidate>
                 <label for="nombre">Nombre</label>
+                <span class="campoObligatorio">*</span>
                 <div class="boxInputs">
                     <i class="fas fa-user"></i>
                     <input type="text" id="nombre" 
@@ -61,6 +62,7 @@
                 </div>
 
                 <label for="apellidos">Apellidos</label>
+                <span class="campoObligatorio">*</span>
                 <div class="boxInputs">
                     <i class="fas fa-user"></i>
                     <input type="text" id="apellidos" 
@@ -78,20 +80,23 @@
                 </div>
 
                 <label for="tlfn">Ciudad</label>
+                <span class="campoObligatorio">*</span>
                 <div class="boxInputs">
                     <i class="fas fa-building"></i>
                     <select id="ciudades" name="ciudades" style="width:100%"></select>
                 </div>
                 
                 <label for="email">Correo electrónico</label>
+                <span class="campoObligatorio">*</span>
                 <div class="boxInputs">
                     <i class="fas fa-envelope"></i>
                     <input type="email" id="email" 
                         name="email" 
-                        placeholder="Tu email" autocomplete="email" required>
+                        placeholder="Tu email" autocomplete="email" required />
                 </div>
 
                 <label for="comentario">Mensaje</label>
+                <span class="campoObligatorio">*</span>
                 <textarea id="comentario" 
                     name="comentario" rows="4" 
                     placeholder="Escribe tu mensaje" required>
@@ -110,6 +115,8 @@
                 <div id="mensajeError"></div>
 
                 <button type="submit">Enviar</button>
+
+                <span class="textoObligatorio">* Campo requerido</span>
             </form>
         </div>
     </section>
