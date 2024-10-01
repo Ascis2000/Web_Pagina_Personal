@@ -35,7 +35,6 @@ section.formulario {
     font-size:0.7em;
     font-weight:bold;
     padding: 0px 0px 0px 0px;
-
 }
 
 .boxFormulario h2 {
@@ -48,6 +47,12 @@ section.formulario {
     width: 100%;
     position: relative;
     margin-bottom: 15px;
+}
+.boxFormulario .boxSelects {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .boxFormulario label {
@@ -71,14 +76,20 @@ section.formulario {
     box-shadow: inset 0px 0px 6px rgba(228, 244, 254, 0.6);
     transition: border 0.3s, box-shadow 0.3s ease;
 }
-.boxFormulario input:hover, textarea:hover, select:hover {
+
+.boxFormulario input:hover, textarea:hover {
     border: 1px solid #6ea6c0;
+    box-shadow: inset 0px 0px 6px rgba(100, 247, 255, 0.6);
+}
+.boxFormulario .boxSelects:hover {
     box-shadow: inset 0px 0px 6px rgba(100, 247, 255, 0.6);
 }
 .boxFormulario input::placeholder, textarea::placeholder {
     color: rgb(199, 199, 199);
 }
-
+.boxFormulario input:focus, textarea:focus {
+    border-color: #7dcaeb;
+}
 .boxFormulario textarea {
     width: 100%;
     margin-bottom: 15px;
@@ -91,11 +102,7 @@ section.formulario {
     transition: border-color 0.3s;
 }
 
-.boxFormulario input:focus, textarea:focus {
-    border-color: #7dcaeb;
-}
-
-.boxFormulario .boxInputs i {
+.boxFormulario .boxInputs i, .boxSelects i {
     top: 11px;
     left: 10px;
     position: absolute;
@@ -108,13 +115,13 @@ section.formulario {
     outline: none;
     padding: 10px 10px 10px 30px;
 
-    color: rgb(41, 90, 142);
     font-size: 0.9em;
+    color: #547eab;
 
     border-radius: 5px;
     border: 1px solid #ccc;
+    background-color: transparent;
     box-shadow: inset 0px 0px 6px rgba(228, 244, 254, 0.6);
-    transition: border 0.3s, box-shadow 0.3s ease;
 }
 
 label.chkbox {
@@ -156,4 +163,9 @@ label.chkbox input[type="checkbox"] {
     font-size:0.8em;
     font-weight: bold;
     margin-bottom:10px;
+}
+
+/* Estilo para SweetAlert */
+.custom-alerta-popup {
+    font-size: 0.8em;
 }

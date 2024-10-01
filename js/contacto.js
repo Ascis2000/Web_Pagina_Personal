@@ -66,7 +66,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     if (nombre.length < 3 || nombre.length > 30) {
         //err
         console.log("Nombre fuera de tamaño: 3-30");
-        msj += "Nombre fuera de tamaño: 3-30\n";
+        msj += "- Nombre fuera de tamaño: 3-30\n";
     }
     
     /* const regexNombre = /^[A-Za-zÀ-ÿ\s]{2,}$/;
@@ -80,27 +80,27 @@ document.querySelector("form").addEventListener("submit", function (event) {
     // 3 < lname < 30 required
     if (apellidos.length < 3 || apellidos.length > 50) {
         console.log("Apellido fuera de tamaño: 3-50");
-        msj += "Apellido fuera de tamaño: 3-50\n";
+        msj += "- Apellido fuera de tamaño: 3-50\n";
     }
 
     if (
     (!email.endsWith(".com") && !email.endsWith(".es")) ||
     !email.includes("@")
     ) {
-        console.log("Error validación: " + email);
-        msj += "Error validación: " + email+"\n";
+        console.log("El email contiene errores");
+        msj += "- El email contiene errores" + "\n";
     }
 
     // select required ??
     if (ciudades == "") {
         console.log("Selecciona alguna Ciudad");
-        msj += "Selecciona alguna Ciudad\n";
+        msj += "- Selecciona alguna Ciudad\n";
     }
 
     //aceptar términos y publicidad
     if (!accept || !spam) {
         console.log("Por favor, acepta condiciones y envío de publicidad");
-        msj += "Por favor, acepta condiciones y envío de publicidad\n";
+        msj += "- Por favor, acepta condiciones y envío de publicidad\n";
     }
     console.log(msj);
 
@@ -109,7 +109,17 @@ document.querySelector("form").addEventListener("submit", function (event) {
         let mensajeError = document.getElementById("mensajeError")
         mensajeError.innerHTML = "";
 
-        alert(msj);
+        const textoFormateado0 = msj.replace(/\n/g, "<br>");
+        //alert(msj);
+        Swal.fire({
+            html: msj.replace(/\n/g, "<br>"),
+            icon: "error",
+            width: 600,
+            color: "red",
+            customClass: {
+                popup: 'custom-alerta-popup'
+            }
+        });
         const textoFormateado = msj.replace(/\n/g, "<br>");
         mensajeError.innerHTML = textoFormateado;
     }
